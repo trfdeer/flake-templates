@@ -4,7 +4,7 @@
   ];
 
   perSystem = { system, ... }: {
-    _module.args.nixpkgs = lib.mkDefault import inputs.nixpkgs {
+    _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
 
       overlays = [
